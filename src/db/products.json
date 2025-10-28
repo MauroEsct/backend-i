@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "title": "Producto de Prueba 1",
+    "description": "Esta es la descripción de mi producto",
+    "code": "PROD100",
+    "price": 249.5,
+    "status": true,
+    "stock": 45,
+    "category": "Pruebas",
+    "thumbnails": [
+      "img/foto1.jpg"
+    ]
+  }
+]
