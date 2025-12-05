@@ -5,6 +5,7 @@ import productsRouter from './routes/products.router.js';
 import cartsRouter from './routes/carts.router.js';
 import viewsRouter from './routes/views.router.js';
 import ProductManager from './managers/ProductManager.js';
+import mongoose from 'mongoose';
 
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
@@ -33,6 +34,10 @@ app.use((req, res, next) => {
     req.io = io;
     next();
 });
+/// Mongoose
+mongoose.connect('mongodb://127.0.0.1:27017/ecommerce')
+    .then(() => console.log("Conectado a la base de datos MongoDB"))
+    .catch((error) => console.error("Error al conectar a MongoDB", error));
 
 // --- Rutas ---
 app.use('/', viewsRouter);
